@@ -1,0 +1,23 @@
+/* App.css */
+
+/* General Styles */
+body {
+  margin: 0;
+  /* Removed font-family as it's overridden by Bootstrap */
+}
+
+/* Card Styles */
+.card {
+  border-radius: 0.5rem; /* Used */
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: #E91E63; /* Used */
+  border-color: #E91E63; /* Used */
+}
+
+/* Alert Styles */
+.alert {
+  margin-bottom: 1rem; /* Used */
+}

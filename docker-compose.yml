@@ -1,0 +1,26 @@
+services:
+  frontend:
+    build:
+      context: ./frontend/secure-app
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_APP_HOST=localhost
+        - REACT_APP_APP_PORT=8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend/project
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - mediafiles:/project/mediafiles
+      - staticfiles:/project/staticfiles
+
+volumes:
+  mediafiles:
+  staticfiles:
